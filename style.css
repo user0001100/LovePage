@@ -290,3 +290,92 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+/*2nd */
+
+/* Romantic photo background */
+body {
+    background-color: #24101f;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("./her-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(40, 5, 30, 0.45),
+        rgba(120, 20, 70, 0.40)
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Floating hearts layer */
+.heart-layer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -50px;
+    left: var(--left);
+    font-size: var(--size);
+    opacity: 0;
+    animation: floatHeart var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.85;
+    }
+
+    85% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* Mobile performance */
+@media (max-width: 600px) {
+    body::before {
+        background-position: center center;
+    }
+
+    .floating-heart {
+        font-size: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-heart {
+        animation: none;
+        display: none;
+    }
+}
