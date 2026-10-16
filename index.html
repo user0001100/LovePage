@@ -2,124 +2,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff0f5">
-  <title>A Little Surprise For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#230d20">
+    <title>A Little Something For You ❤️</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
 
-  
-<div class="heart-layer" aria-hidden="true">
-    <span class="floating-heart"
-          style="--left: 8%; --size: 25px; --duration: 9s; --delay: 0s;">❤️</span>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div id="heart-layer" aria-hidden="true"></div>
 
-    <span class="floating-heart"
-          style="--left: 22%; --size: 18px; --duration: 12s; --delay: 2s;">💗</span>
+    <main class="page">
+        <p class="eyebrow">✦ A LITTLE CORNER OF MY HEART ✦</p>
 
-    <span class="floating-heart"
-          style="--left: 38%; --size: 28px; --duration: 10s; --delay: 4s;">💕</span>
+        <section class="love-card">
+            <div class="top-heart" aria-hidden="true">♡</div>
 
-    <span class="floating-heart"
-          style="--left: 55%; --size: 20px; --duration: 11s; --delay: 1s;">💖</span>
+            <p class="small-label">For someone special</p>
 
-    <span class="floating-heart"
-          style="--left: 72%; --size: 26px; --duration: 13s; --delay: 3s;">❤️</span>
+            <h1>
+                You make ordinary
+                <span>moments feel magical.</span>
+            </h1>
 
-    <span class="floating-heart"
-          style="--left: 90%; --size: 19px; --duration: 10s; --delay: 5s;">💗</span>
-</div>
+            <div class="ornament" aria-hidden="true">
+                <span></span> ♥ <span></span>
+            </div>
 
+            <p class="description">
+                Some people make the world feel a little softer,
+                a little brighter, and a lot more beautiful.
+            </p>
 
-  <div class="hearts" id="hearts"></div>
+            <button id="letter-button" class="love-button" type="button">
+                Open your little surprise <span>♡</span>
+            </button>
 
-  <main class="container">
-    <section class="hero card">
-      <div class="top-heart">♡</div>
-      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+            <p class="signature">Made with a little courage & lots of care</p>
+        </section>
 
-      <!-- Yahan uska naam change karna -->
-      <h1>Hey, <span id="herName">Beautiful</span> <span class="pink">♡</span></h1>
+        <p class="bottom-note">A little page, with a little feeling. ♡</p>
+    </main>
 
-      <p class="subtitle">
-        I made this little corner of the internet just to make you smile.
-      </p>
+    <div
+        id="letter-modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="letter-title"
+        aria-hidden="true"
+    >
+        <div class="letter-box">
+            <button
+                id="close-letter"
+                class="close-button"
+                type="button"
+                aria-label="Close letter"
+            >×</button>
 
-      <div class="flower">🌷</div>
+            <div class="letter-heart" aria-hidden="true">💗</div>
 
-      <p class="intro">
-        Some people make ordinary days feel a little more special.
-        You're one of those people.
-      </p>
+            <p class="small-label">A little message for you</p>
+            <h2 id="letter-title">Hey, you! ♡</h2>
 
-      <button class="primary-btn" id="openLetter">
-        Open your little surprise 💌
-      </button>
+            <p id="letter-message" class="letter-message">
+                There's something lovely about the way you make
+                an ordinary day feel special. I just wanted to
+                make you smile and remind you that you are
+                appreciated more than you might know.
+            </p>
 
-      <div class="letter hidden" id="letter">
-        <div class="letter-icon">💌</div>
-        <h2>A little note for you</h2>
+            <p class="letter-signature">Someone who thinks you're special ♡</p>
 
-        <!-- Apna personal message yahan likhna -->
-        <p>
-          I don't know if I say it enough, but I really enjoy
-          talking to you. Your presence brings a little happiness
-          to ordinary moments, and I wanted you to know that.
-        </p>
-
-        <p>
-          No expectations, no pressure — just a genuine little
-          reminder that you're special. Keep smiling. ❤️
-        </p>
-
-        <p class="signature">Made with a little courage & lots of care ♡</p>
-      </div>
-    </section>
-
-    <section class="reasons card">
-      <p class="eyebrow">JUST A FEW LITTLE THINGS</p>
-      <h2>Things that make you special ✨</h2>
-
-      <div class="reason-grid">
-        <div class="reason">
-          <span>🌸</span>
-          <h3>Your vibe</h3>
-          <p>You bring your own kind of warmth.</p>
+            <button id="close-letter-bottom" class="soft-button" type="button">
+                Keep smiling ✨
+            </button>
         </div>
+    </div>
 
-        <div class="reason">
-          <span>😊</span>
-          <h3>Your smile</h3>
-          <p>It can make a normal day better.</p>
-        </div>
-
-        <div class="reason">
-          <span>🦋</span>
-          <h3>Being you</h3>
-          <p>You don't need to be anyone else.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="ending card">
-      <div class="big-heart">♥</div>
-      <h2>One last little thing...</h2>
-      <p>I'm glad our paths crossed. That's all. ♡</p>
-
-      <button class="secondary-btn" id="smileBtn">
-        Send a little smile 😊
-      </button>
-
-      <p id="smileMessage" class="smile-message hidden">
-        Here's a tiny virtual hug for your day! 🤗💗
-      </p>
-    </section>
-
-    <footer>Made with ♡, just for you</footer>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
