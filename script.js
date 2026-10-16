@@ -109,3 +109,23 @@ if (jokeButton && jokeResult) {
     });
 }
 
+
+
+const birthdayJokes = [
+  "Birthday girl ka attitude aaj premium subscription par hai. 😂👑",
+  "Cake kaatne se pehle ek important sawaal: mera piece kidhar hai? 🎂🤣",
+  "Aaj ke din saare rules cancel... bas smile karna compulsory hai! 💗",
+  "SayHi ne socha hoga ek hello karwa dete hain... inko toh inside joke mil gaya! 😂",
+  "VASTAGANU HUIIYA CHACHA! Birthday edition mein bhi ye dialogue nahi rukega! 🤣",
+  "Birthday wish simple hai: khush raho, haste raho, aur cake share karna mat bhoolna! 🍰"
+];
+
+const birthdayJokeButton = document.getElementById("birthday-joke-button");
+const birthdayJokeResult = document.getElementById("birthday-joke-result");
+
+if (birthdayJokeButton && birthdayJokeResult) {
+  birthdayJokeButton.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * birthdayJokes.length);
+    birthdayJokeResult.textContent = birthdayJokes[randomIndex];
+  });
+}

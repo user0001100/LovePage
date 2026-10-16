@@ -745,3 +745,96 @@ h1 span {
     }
 }
 
+
+/* Personalized journey and birthday touches */
+.section-kicker {
+  color: #ffc6dc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.memory-number {
+  display: inline-block;
+  color: #ffd0e2;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.memory-sticker {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 210, 230, 0.4);
+  border-radius: 999px;
+  color: #ffe1ee;
+  font-size: 0.85rem;
+}
+
+.meme-top {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.meme-emoji {
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.birthday-joke-button {
+  display: block;
+  margin: 28px auto 12px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8db8, #ffc1d8);
+  color: #35152a;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.birthday-joke-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 141, 184, 0.25);
+}
+
+.birthday-joke-result {
+  min-height: 28px;
+  text-align: center;
+  line-height: 1.7;
+  color: #ffe3ef;
+}
+
+.final-signature {
+  margin-top: 18px;
+  color: #ffd0e2;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .section-intro {
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  .birthday-joke-button {
+    max-width: 100%;
+    padding: 12px 16px;
+  }
+}
