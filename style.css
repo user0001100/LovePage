@@ -32,8 +32,8 @@ body::before {
     inset: 0;
     z-index: -3;
     background-image: url("./her-photo.jpg");
-    background-size: cover;
-    background-position: center center;
+    background-size: 90% auto;
+    background-position: calc(50% + 160px) center;
     background-repeat: no-repeat;
     transform: scale(1.025);
 }
@@ -101,10 +101,14 @@ body::after {
 }
 
 .love-card {
+ 
+    
+    
     width: min(100%, 560px);
     padding: 42px 38px 34px;
     text-align: center;
     position: relative;
+    left: -350px;
     overflow: hidden;
     border: 1px solid rgba(255, 226, 240, 0.30);
     border-radius: 28px;
