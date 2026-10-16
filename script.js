@@ -73,3 +73,39 @@ document.addEventListener("keydown", (event) => {
         closeLetter();
     }
 });
+
+
+
+const birthdayJokes = [
+    "Birthday rule #1: Cake share karna optional hai. 🎂",
+    "Age is just a number... but cake slices are unlimited. 😂",
+    "Birthday queen detected. Compliments must be submitted immediately. 👑",
+    "Today's workout: blowing candles and opening gifts. 💅",
+    "May your selfies be perfect and your cake be extra large. 📸",
+    "Breaking news: World's cutest birthday girl demands more cake! 🚨🎂",
+    "Birthday mood: 1% battery, 100% birthday attitude. 🔋😂",
+    "Official birthday policy: no stress, only cake and compliments. 💗"
+];
+
+const jokeButton = document.getElementById("birthday-joke-button");
+const jokeResult = document.getElementById("birthday-joke-result");
+
+if (jokeButton && jokeResult) {
+    jokeButton.addEventListener("click", () => {
+        const currentJoke = jokeResult.textContent;
+        let nextJoke;
+
+        do {
+            nextJoke =
+                birthdayJokes[
+                    Math.floor(Math.random() * birthdayJokes.length)
+                ];
+        } while (
+            birthdayJokes.length > 1 &&
+            nextJoke === currentJoke
+        );
+
+        jokeResult.textContent = nextJoke;
+    });
+}
+
